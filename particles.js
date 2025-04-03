@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const canvas = document.getElementById('particleCanvas');
     const ctx = canvas.getContext('2d');
+    const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--particle-color').trim();
 
     // Set canvas size
     function resizeCanvas() {
@@ -45,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
             this.vy = (Math.random() - 0.5) * .5; // Random vertical speed
         }
 
-        draw() {
-            ctx.fillStyle = 'rgba(255, 255, 255, 1)'; // White particles
+        draw(color) {
+            ctx.fillStyle = color; 
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.closePath();
@@ -99,21 +100,32 @@ document.addEventListener('DOMContentLoaded', function () {
     // Animation function
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+    
+        // Get the updated primary color on each frame
+        const primaryColor = getComputedStyle(document.documentElement)
+                              .getPropertyValue('--particle-color').trim();
+    
         particles.forEach(particle => {
             particle.update();
-            particle.draw();
+            particle.draw(primaryColor);
         });
-
+    
         // Optional: Draw connections between particles
-        connectParticles();
-
+        connectParticles(primaryColor);
+    
         requestAnimationFrame(animate);
     }
 
     // Connect particles with lines
-    function connectParticles() {
-        let opacityValue = 1;
+    function connectParticles(primaryColor) {
+        // Helper function to convert hex to RGB
+        function hexToRgb(hex) {
+            let shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+            hex = hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
+            let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : null;
+        }
+
         for (let i = 0; i < particles.length; i++) {
             for (let j = i; j < particles.length; j++) {
                 let dx = particles[i].x - particles[j].x;
@@ -121,8 +133,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 let distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance < 100) {
-                    opacityValue = 1 - (distance / 100);
-                    ctx.strokeStyle = `rgba(255, 255, 255, ${opacityValue})`; // White lines
+                    let opacityValue = 1 - (distance / 100);
+                    ctx.strokeStyle = `rgba(${hexToRgb(primaryColor)}, ${opacityValue})`;
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
