@@ -1053,12 +1053,16 @@ textarea {
     padding: 5px 15px;
     border-radius: 5px;
     font-weight: bold;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
 }
 
 .skill-tag svg {
+    width: 100%;
     fill: var(--quaternary-color);
 }
-
 
 
 /* Projects Section */
