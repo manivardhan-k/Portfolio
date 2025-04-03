@@ -1446,7 +1446,7 @@ textarea {
     .project-card-2{
         flex-direction: column;
         height: auto;
-        width: 500px;
+        max-width: 500px;
     }
 
     .project-card-1 .project-image{
