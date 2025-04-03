@@ -16,7 +16,7 @@ window.addEventListener("mousemove", function (e) {
     timeout = setTimeout(() => {
         cursorOutline.animate(
             { left: `${posX}px`, top: `${posY}px` },
-            { duration: 800, fill: "forwards" }
+            { duration: 500, fill: "forwards" }
         );
-    }, 1); // Adjust delay time
+    }, 0); // Adjust delay time
 });
