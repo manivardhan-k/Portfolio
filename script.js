@@ -227,3 +227,19 @@ document.addEventListener("click", (event) => {
         sideStage.classList.remove("active");
     }
 });
+
+function toggleNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+
+    if (window.innerWidth <= 1250) {
+        navToggle.classList.add('active'); // Force menu to 'X' state
+    } else {
+        navToggle.classList.remove('active'); // Reset if screen size increases
+    }
+}
+
+// Run when the page loads
+window.addEventListener('load', toggleNav);
+
+// Run when the window resizes
+window.addEventListener('resize', toggleNav);
