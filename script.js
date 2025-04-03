@@ -221,7 +221,7 @@ navToggle.addEventListener('click', () => {
 });
 
 document.addEventListener("click", (event) => {
-    if (!navToggle.contains(event.target) && !sideStage.contains(event.target)) {
+    if (!navToggle.contains(event.target) && !sideStage.contains(event.target) && navbar.classList.contains("active")) {
         navbar.classList.remove('active');
         navToggle.classList.remove("active");
         sideStage.classList.remove("active");
