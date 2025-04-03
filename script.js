@@ -219,3 +219,11 @@ navToggle.addEventListener('click', () => {
     sideStage.classList.toggle('active');
 
 });
+
+document.addEventListener("click", (event) => {
+    if (!navToggle.contains(event.target) && !sideStage.contains(event.target)) {
+        navbar.classList.remove('active');
+        navToggle.classList.remove("active");
+        sideStage.classList.remove("active");
+    }
+});
