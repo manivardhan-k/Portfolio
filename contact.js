@@ -6,12 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     contactBtn.addEventListener("click", (e) => {
         e.stopPropagation(); // Prevent the event from bubbling and closing immediately
         contactCard.classList.toggle("active");
+        contactBtn.classList.toggle("active");
     });
 
     // Close the contact card if you click anywhere outside of it
     document.addEventListener("click", (event) => {
         if (!contactCard.contains(event.target) && !contactBtn.contains(event.target)) {
             contactCard.classList.remove("active");
+            contactBtn.classList.remove("active");
         }
     });
 
