@@ -354,18 +354,18 @@ h4 {
     position: relative;
     clip-path: circle(50% at 50% 50%) inset(0 0 0 50%);
     transition: transform 0.5s ease-in-out,
-        border-color 0s ease-in-out,
+        border-color 0.5s ease-in-out,
         background-color 0.5s ease-in-out;
 }
 
 .circle {
     position: absolute;
-    width: 35px;
-    height: 33px;
+    width: 30px;
+    height: 32px;
     background-color: var(--navbar-bg);
     border-radius: 50%;
     clip-path: circle(40% at 80% 50%);
-    transform: translateX(0px);
+    transform: translateX(4px);
     opacity: 1;
     transition: transform 0.5s ease-in-out,
         opacity 0.5s ease-in-out,
@@ -774,6 +774,10 @@ textarea {
 .contact-card button:hover {
     cursor: none;
     animation: shake .5s linear;
+}
+
+.contact-card button.active{
+    opacity: 0.8;
 }
 
 
