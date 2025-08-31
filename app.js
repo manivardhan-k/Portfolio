@@ -69,3 +69,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial setup
     setActiveLink();
 });
+
+
+// Form validation 
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name.length < 2) { 
+        alert('Please enter a valid name');
+        return;
+    }
+
+    if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+        alert('Please enter a valid email address');
+        return;
+    }
+
+    if (message.length < 10) {
+        alert('Message must be at least 10 characters long');
+        return;
+    }
+
+    alert('Thanks for your message! I\'ll get back to you soon.');
+    this.reset();
+});
