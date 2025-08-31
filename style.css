@@ -463,7 +463,7 @@ h4 {
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 150px;
+    width: 160px;
     height: 100vh;
 
     overflow: visible;
@@ -500,7 +500,7 @@ h4 {
 }
 
 .navbar.active {
-    left: -150px;
+    left: -157px;
 }
 
 .nav-toggle {
@@ -508,7 +508,7 @@ h4 {
     height: 40px;
     width: 40px;
     background-color: var(--navbar-bg);
-    left: 147px;
+    left: 157px;
     top: 0px;
     border-radius: 0% 0% 25% 0%;
     border: 3px solid var(--theme-base);
@@ -575,6 +575,7 @@ h4 {
 
     margin-bottom: 10px;
     margin-top: 10px;
+    margin-right: 10px;
 }
 
 .nav-container .logo {
@@ -626,7 +627,7 @@ h4 {
     color: var(--nav-hover);
     /* Change to highlight active link */
     font-weight: bold;
-    transform: translateX(20px);
+    transform: translateX(18px);
 }
 
 .nav-links .line {
@@ -1300,7 +1301,7 @@ textarea {
 }
 
 .certificate-content h3 {
-    margin: 5px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
     font-size: 23.5px;
     color: var(--primary-color);
 }
