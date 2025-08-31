@@ -1277,9 +1277,9 @@ textarea {
     justify-content: center;
     background: var(--quaternary-color);
     padding: 30px;
-    max-width: 400px;
+    width: auto;
     /* min-width: 300px; */
-    height: 350px;
+    height: 380px;
     border-radius: 50px;
     gap: 5%;
     transform-origin: center;
@@ -1300,7 +1300,7 @@ textarea {
 }
 
 .certificate-content h3 {
-    margin: 15px 0px;
+    margin: 5px 0px 0px 0px;
     font-size: 23.5px;
     color: var(--primary-color);
 }
