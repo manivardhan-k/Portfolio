@@ -49,7 +49,7 @@ body {
     background-color: transparent;
     color: white;
     line-height: 1.6;
-    cursor: none;
+    /* cursor: none; */
     overflow: scroll;
     scroll-behavior: smooth;
 }
@@ -345,11 +345,11 @@ h4 {
 }
 
 .toggle-theme {
-    width: 35px;
-    height: 35px;
-    margin: 5px 5px;
+    width: 30px;
+    height: 30px;
+    margin: 7px 7px;
     background-color: var(--quaternary-color);
-    border: 2px solid var(--navbar-bg);
+    border: 2px solid var(--quaternary-color);
     border-radius: 50%;
     position: relative;
     clip-path: circle(50% at 50% 50%) inset(0 0 0 50%);
@@ -361,27 +361,25 @@ h4 {
 .circle {
     position: absolute;
     width: 30px;
-    height: 32px;
+    height: 30px;
     background-color: var(--navbar-bg);
     border-radius: 50%;
-    clip-path: circle(40% at 80% 50%);
-    transform: translateX(4px);
+    clip-path: circle(40% at 70% 50%);
+    transform: translateX(3.5px) translateY(-2px);
     opacity: 1;
     transition: transform 0.5s ease-in-out,
         opacity 0.5s ease-in-out,
-        /* Added opacity transition */
         width 0.5s ease-in-out;
 }
 
 .circle.active {
     width: 0px;
-    transform: translateX(40px);
+    transform: translateX(35px);
 }
 
 .toggle-theme.active {
     transform: translateX(40px);
     border: 2px solid var(--theme-base);
-    /* Border-color changes here */
     background-color: #ffc830;
 }
 
@@ -569,13 +567,14 @@ h4 {
 
 .nav-container {
     position: relative;
+    left: -5px;
     height: 100%;
     display: flex;
     flex-direction: column;
 
     margin-bottom: 10px;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .nav-container .logo {
@@ -1172,7 +1171,7 @@ textarea {
     cursor: none;
 }
 
-.profile-img {
+.project-img {
     display: flex;
 }
 
@@ -1181,6 +1180,7 @@ textarea {
     max-width: 300px;
     border-radius: 40px;
     border: 3px solid var(--primary-color);
+    will-change: transform;
 }
 
 .project-content h3 {
@@ -1299,6 +1299,7 @@ textarea {
     max-width: 300px;
     border-radius: 40px;
     border: 3px solid var(--primary-color);
+    will-change: transform;
 }
 
 .certificate-content h3 {
