@@ -1111,8 +1111,8 @@ textarea {
 }
 
 .project-title, .certificate-title {
-    width: 300px;
-    justify-self: center;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .project-title h2, .certificate-title h2{
