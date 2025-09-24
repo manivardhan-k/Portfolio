@@ -498,7 +498,7 @@ h4 {
 }
 
 .navbar.active {
-    left: -157px;
+    left: -160px;
 }
 
 .nav-toggle {
@@ -819,7 +819,7 @@ textarea {
     margin-left: 20px;
     margin-right: 20px;
     gap: 50px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     /* border: 5px solid var(--primary-color); */
     background-color: var(--quaternary-color);
@@ -915,6 +915,7 @@ textarea {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .contact-link {
@@ -1190,6 +1191,7 @@ textarea {
 }
 
 .project-content {
+    padding: 0px 10px;
     flex: 1;
 }
 
@@ -1198,6 +1200,11 @@ textarea {
     line-height: 1.4;
     text-align: justify;
     color: var(--secondary-color);
+}
+
+.project-link{
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .project-link svg {
@@ -1307,9 +1314,13 @@ textarea {
     color: var(--primary-color);
 }
 
-/* Experiment with this */
 .certificate-content {
     flex: 1;
+}
+
+.certificate-link{
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .certificate-link svg {
@@ -1427,7 +1438,7 @@ textarea {
     }
 
     .navbar {
-        left: -150px;
+        left: -160px;
     }
 
     .navbar.active {
@@ -1442,6 +1453,15 @@ textarea {
         right: 0px;
     }
 
+    .certificate-image img {
+        min-width: 250px;
+    }
+
+    .certificate-card-1,
+    .certificate-card-2 {
+        height: 400px;
+    }
+
 }
 
 
@@ -1450,7 +1470,7 @@ textarea {
     .navbar {
         align-items: center;
         justify-content: center;
-        padding: 25px;
+        padding: 15px;
         min-height: 100px;
         display: flex;
     }
@@ -1473,13 +1493,28 @@ textarea {
         text-align: center;
         padding: 25px 10px;
         gap: 25px;
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .about-content h2{
+        font-size: 30px;
+    }
+
+    .about-content h3 {
+        font-size: 21px;
+    }
+
+    .about-content p {
+        font-size: 14px;
     }
 
     #about,
     #skills,
     #projects,
     #contact {
-        padding: 150px 25px;
+        padding: 150px 5px;
     }
 
     #about img {
@@ -1501,6 +1536,7 @@ textarea {
 
     .projects-container {
         align-items: center;
+        padding: 10px 15px;
     }
 
     .project-card-1,
@@ -1508,9 +1544,16 @@ textarea {
         flex-direction: column;
         height: auto;
         max-width: 500px;
+        padding: 30px 15px;
     }
 
     .project-card-1 .project-image{
         order: -1;
     }
+
+    .certificate-card-1,
+    .certificate-card-2 {
+        height: 380px;
+    }
+
 }
