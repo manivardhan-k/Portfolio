@@ -242,3 +242,42 @@ window.addEventListener('load', toggleNav);
 
 // Run when the window resizes
 window.addEventListener('resize', toggleNav);
+
+
+
+// Auto-scrolling carousel for certifications   ---  Add this when there are more certifications
+// const carousel = document.getElementById("carousel");
+// let userScrolling = false;
+// let resumeTimeout;
+// const scrollSpeed = 1; // pixels per frame
+
+// // Duplicate the content to make looping seamless
+// carousel.innerHTML += carousel.innerHTML;
+
+// function autoScroll() {
+//     if (!userScrolling) {
+//         carousel.scrollLeft += scrollSpeed;
+
+//         // Reset scroll when reaching the midpoint (first set duplicated)
+//         if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+//             carousel.scrollLeft = 0;
+//         }
+//     }
+//     requestAnimationFrame(autoScroll);
+// }
+
+// // Detect user scroll/touch/mouse
+// function pauseScroll() {
+//     userScrolling = true;
+//     clearTimeout(resumeTimeout);
+//     resumeTimeout = setTimeout(() => {
+//         userScrolling = false;
+//     }, 5000);
+// }
+
+// carousel.addEventListener("wheel", pauseScroll, { passive: true });
+// carousel.addEventListener("touchstart", pauseScroll, { passive: true });
+// carousel.addEventListener("mousedown", pauseScroll);
+
+// autoScroll();
+
