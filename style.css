@@ -1267,6 +1267,20 @@ textarea {
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
+#certifications.animate-in {
+    opacity: 1;
+    /* Fade in */
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    /* Reset rotation */
+}
+
+#certifications.animate-out {
+    opacity: 0;
+    /* Fade in */
+    transform: rotateX(0deg) rotateY(60deg) rotateZ(0deg);
+    /* Reset rotation */
+}
+
 .certificate-container {
     display: flex;
     flex-direction: row;

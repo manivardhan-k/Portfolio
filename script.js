@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const aboutSection = document.getElementById("about");
     const projectsSection = document.getElementById("projects");
     const skillsContent = document.querySelector(".skills-container");
+    const certificationsSection = document.getElementById("certifications");
     const frontend = document.getElementById("frontend");
     const tools = document.getElementById("tools");
 
@@ -100,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     // Start observing elements
-    [aboutSection, projectsSection, skillsContent, frontend, tools].forEach((el) => {
+    [aboutSection, projectsSection, certificationsSection, skillsContent, frontend, tools].forEach((el) => {
         if (el) observer.observe(el);
     });
 });
