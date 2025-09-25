@@ -78,8 +78,8 @@ h4 {
 
 .theme-change.active,
 .theme-change.active2 {
-    width: 200vw;
-    height: 200vw;
+    width: 500vw;
+    height: 500vw;
     clip-path: circle(100% at 50% 0);
     opacity: 0;
 }
