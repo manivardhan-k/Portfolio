@@ -1141,35 +1141,36 @@ textarea {
     animation: fade-in 1s ease-in-out, float 10s ease-in-out infinite 3s;
 }
 
-.project-card-1,
-.project-card-2 {
+.project-style-1,
+.project-style-2 {
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--quaternary-color);
-    padding: 30px;
+    padding: 15px 30px;
     max-width: 800px;
     min-width: 300px;
     height: auto;
     border-radius: 50px;
     gap: 5%;
     transform-origin: center;
-    transition: transform 0.5s ease-in-out;
+    transition: transform .7s ease-in-out, max-width .7s ease-in-out;
     box-shadow: 5px 5px 15px var(--navbar-bg);
 }
 
-.project-card-1 {
+.project-style-1 {
     transform: translateX(171px);
 }
 
-.project-card-2 {
+.project-style-2 {
     transform: translateX(-171px);
 }
 
-.project-card-1:hover,
-.project-card-2:hover {
-    transform: scale(1.07);
+.project-style-1:hover,
+.project-style-2:hover {
+    transform: scale(1.05);
     cursor: none;
+    /* max-width: 1000px; */
 }
 
 .project-img {
@@ -1180,9 +1181,17 @@ textarea {
     width: 100%;
     max-width: 300px;
     border-radius: 40px;
-    border: 3px solid var(--primary-color);
-    will-change: transform;
+    border: 2px solid var(--primary-color);
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
+
+/* .project-style-1:hover .project-image img {
+    transform: translateX(60px) scale(1.5);
+}
+.project-style-2:hover .project-image img {
+    transform: translateX(-60px) scale(1.5);
+} */
 
 .project-content h3 {
     margin: 10px 0px;
@@ -1202,9 +1211,17 @@ textarea {
     color: var(--secondary-color);
 }
 
-.project-link{
+
+.project-link {
     width: fit-content;
     margin: 0 auto;
+    margin-bottom: 5px;
+    position: relative;
+    display: flex;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s ease-in-out;
 }
 
 .project-link svg {
@@ -1216,27 +1233,17 @@ textarea {
     border-radius: 20px;
 }
 
-.project-link {
-    margin-bottom: 10px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.5s ease-in-out;
-}
-
-.project-card-1:hover .project-link{
+.project-style-1:hover .project-link{
     transform: translateX(171px);
 }
 
-.project-card-2:hover .project-link{
+.project-style-2:hover .project-link{
     transform: translateX(-171px);
 }
 
 .project-link svg:hover {
     cursor: none;
     background-color: var(--primary-color);
-    /* transform: translateX(171px); */
     animation: shake .5s linear;
     color: var(--quaternary-color);
 }
@@ -1244,6 +1251,7 @@ textarea {
 .tech-stack {
     margin-top: 10px;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
 }
@@ -1432,16 +1440,12 @@ textarea {
 
 @media (max-width: 1250px) {
 
-    .project-card-1 {
+    .project-style-1, .project-style-2 {
         transform: translateX(0);
     }
 
-    .project-card-2 {
-        transform: translateX(0);
-    }
-
-    .project-card-1:hover .project-link,
-    .project-card-2:hover .project-link{
+    .project-style-1:hover .project-link,
+    .project-style-2:hover .project-link{
         transform: none;
     }
 
@@ -1572,14 +1576,14 @@ textarea {
         padding: 10px 15px;
     }
 
-    .project-card-1,
-    .project-card-2{
+    .project-style-1,
+    .project-style-2{
         flex-direction: column;
         height: auto;
         padding: 30px 20px 20px 20px;
     }
 
-    .project-card-1 .project-image{
+    .project-style-1 .project-image{
         order: -1;
     }
 
