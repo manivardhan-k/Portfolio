@@ -1125,7 +1125,6 @@ textarea {
     border-radius: 50px;
     animation: float 10s ease-in-out infinite 1s;
     box-shadow: 5px 5px 15px var(--navbar-bg);
-
 }
 
 .projects-container{
@@ -1142,6 +1141,8 @@ textarea {
 
 .project-style-1,
 .project-style-2 {
+    position: relative;
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1185,13 +1186,6 @@ textarea {
     transition: transform 0.5s ease;
 }
 
-/* .project-style-1:hover .project-image img {
-    transform: translateX(60px) scale(1.5);
-}
-.project-style-2:hover .project-image img {
-    transform: translateX(-60px) scale(1.5);
-} */
-
 .project-content h3 {
     margin: 10px 0px;
     font-size: 23.5px;
@@ -1210,17 +1204,16 @@ textarea {
     color: var(--secondary-color);
 }
 
-
 .project-link {
     width: fit-content;
     margin: 0 auto;
-    margin-bottom: 5px;
+    margin-top: 5px;
     position: relative;
     display: flex;
     min-height: 40px;
     align-items: center;
     justify-content: center;
-    transition: transform 0.7s ease-in-out;
+    transition: transform 0.7s ease-in-out, margin-top 0.7s ease-in-out;
 }
 
 .project-link svg {
@@ -1234,10 +1227,12 @@ textarea {
 
 .project-style-1:hover .project-link{
     transform: translateX(171px);
+    margin-top: 0px;
 }
 
 .project-style-2:hover .project-link{
     transform: translateX(-171px);
+    margin-top: 0px;
 }
 
 .project-link svg:hover {

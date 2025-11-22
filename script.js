@@ -199,11 +199,11 @@ function updateTime() {
     const hours = now.getHours().toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
     document.querySelector('.time').textContent = `${hours} ${minutes}`;
-  }
-  
-  // Update time immediately and every minute
-  updateTime();
-  setInterval(updateTime, 1000); // Update every minute
+    }
+
+    // Update time immediately and every minute
+    updateTime();
+    setInterval(updateTime, 1000); // Update every minute
 ;
 
 
