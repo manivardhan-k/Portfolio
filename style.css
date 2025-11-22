@@ -877,8 +877,6 @@ textarea {
     color: var(--secondary-color);
     position: relative;
     padding: 15px 0px;
-    /* text-decoration: underline;
-    text-underline-offset: 8px; */
 }
 
 .about-content p::before {
@@ -1075,8 +1073,9 @@ textarea {
     font-weight: bold;
     display: inline-flex;
     flex-direction: column;
+    white-space: nowrap;
     align-items: center;
-    width: 100px;
+    min-width: 100px;
 }
 
 .skill-tag svg {
@@ -1502,6 +1501,8 @@ textarea {
 }
 
 
+
+
 @media (max-width: 767px) {
 
     .navbar {
@@ -1522,8 +1523,6 @@ textarea {
     .nav-container .logo {
         justify-content: center;
     }
-
-
 
     .about-content {
         flex-direction: column;
