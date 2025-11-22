@@ -40,9 +40,7 @@
     box-sizing: border-box;
     font-family: "Capriola", sans-serif;
     text-decoration: none;
-    /* color: white; */
 }
-
 
 
 body {
@@ -99,8 +97,6 @@ h4 {
     gap: 25px;
     position: fixed;
     display: flex;
-    /* margin: 20px; */
-    /* perspective: 1200px; */
     perspective-origin: 50% 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-60px);
@@ -113,7 +109,6 @@ h4 {
 }
 
 .eye {
-    /* display: inline-block; */
     width: 75px;
     height: 75px;
     margin: 0;
@@ -230,7 +225,6 @@ h4 {
     background-color: transparent;
     position: absolute;
     left: auto;
-    /* right: 50px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,11 +240,9 @@ h4 {
     height: 45px;
     margin: 32.5px;
     background: var(--theme-base);
-    /* filter: drop-shadow(0 0 5px rgb(72, 16, 255)); */
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     position: absolute;
     left: auto;
-    /* right: 52.5px; */
     animation: change-polygon 5s ease-in-out infinite;
 }
 
@@ -393,7 +385,6 @@ h4 {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    /* font-weight: bold; */
 
     border-radius: 25px;
     border: 2px solid var(--theme-base);
@@ -451,7 +442,6 @@ h4 {
 .player:hover {
     box-shadow: 0px 0px 20px white;
 } */
-
 
 
 
@@ -514,10 +504,6 @@ h4 {
     border-top: none;
 
     padding: 8px;
-
-    /* text-align: center;
-    line-height: 2;
-    font-size: 20px; */
 
     cursor: pointer;
     transition: left 1s ease-in-out;
@@ -734,7 +720,6 @@ h4 {
     margin: auto;
     padding: 15px 30px;
     background-color: var(--quaternary-color);
-    /* border-radius: 10px; */
 }
 
 .form-group {
@@ -756,7 +741,6 @@ textarea {
     border: 1px solid black;
     border-radius: 5px;
     color: var(--primary-color);
-    /* bold? */
 }
 
 .contact-card button {
@@ -791,7 +775,6 @@ textarea {
 
     padding-top: 200px;
     padding-bottom: 100px;
-    /* justify-content: flex-end; */
 
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
@@ -819,9 +802,7 @@ textarea {
     margin-left: 20px;
     margin-right: 20px;
     gap: 50px;
-    /* display: flex; */
     align-items: center;
-    /* border: 5px solid var(--primary-color); */
     background-color: var(--quaternary-color);
     box-shadow: 5px 5px 15px var(--navbar-bg);
     opacity: 1;
@@ -907,6 +888,7 @@ textarea {
     border: 2px solid var(--primary-color);
 } */
 
+
 /* Social Links */
 .social-links {
     margin-top: 20px;
@@ -926,7 +908,6 @@ textarea {
     background-color: var(--primary-color);
     border: 2px solid var(--primary-color);
     color: var(--quaternary-color);
-    /* transition: 1s; */
 }
 
 .github-icon, .email-icon, .linkedin-icon {
@@ -1029,7 +1010,6 @@ textarea {
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    /* border: 3px solid var(--navbar-bg); */
     box-shadow: 5px 5px 15px var(--navbar-bg);
     transition: transform 1s ease-out;
 }
@@ -1170,7 +1150,6 @@ textarea {
 .project-style-2:hover {
     transform: scale(1.05);
     cursor: none;
-    /* max-width: 1000px; */
 }
 
 .project-img {
@@ -1313,7 +1292,6 @@ textarea {
 
 .certificate-card-1,
 .certificate-card-2 {
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     background: var(--quaternary-color);
@@ -1375,14 +1353,9 @@ textarea {
 .certificate-link svg:hover {
     cursor: none;
     background-color: var(--primary-color);
-    /* transform: translateX(171px); */
     animation: shake .5s linear;
     color: var(--quaternary-color);
 }
-
-
-
-/* www.linkedin.com/in/mani-vardhan-kumpatla-b1107830b */
 
 
 .cursor-dot {
@@ -1562,7 +1535,6 @@ textarea {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* width: 40%; */
     }
 
     .projects-container {
