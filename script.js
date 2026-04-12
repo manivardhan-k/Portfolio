@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const skillsContent = document.querySelector(".skills-container");
     const certificationsSection = document.getElementById("certifications");
     const frontend = document.getElementById("frontend");
+    const backend = document.getElementById("backend");
     const tools = document.getElementById("tools");
 
     // Create an Intersection Observer
@@ -70,16 +71,20 @@ document.addEventListener("DOMContentLoaded", () => {
             entries.forEach((entry) => {
                 const target = entry.target;
 
-                if (target === frontend || target === tools) {
-                    // If either frontend or tools is visible, activate both
+                if (target === frontend || target === backend || target === tools) {
+                    // If any skill category is visible, activate all three
                     if (entry.isIntersecting) {
                         frontend.classList.add("animate-in");
                         frontend.classList.remove("animate-out");
+                        backend.classList.add("animate-in");
+                        backend.classList.remove("animate-out");
                         tools.classList.add("animate-in");
                         tools.classList.remove("animate-out");
                     } else {
                         frontend.classList.remove("animate-in");
                         frontend.classList.add("animate-out");
+                        backend.classList.remove("animate-in");
+                        backend.classList.add("animate-out");
                         tools.classList.remove("animate-in");
                         tools.classList.add("animate-out");
                     }
@@ -101,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     // Start observing elements
-    [aboutSection, projectsSection, certificationsSection, skillsContent, frontend, tools].forEach((el) => {
+    [aboutSection, projectsSection, certificationsSection, skillsContent, frontend, backend, tools].forEach((el) => {
         if (el) observer.observe(el);
     });
 });
